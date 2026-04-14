@@ -249,13 +249,12 @@ k6.metric("Admission Rate",         f"{h['admission_pct']}%",
 st.markdown("---")
 
 # ── Tabs ──────────────────────────────────────────────────────────────────────
-tab1, tab2, tab3, tab4, tab5, tab6 = st.tabs([
+tab1, tab2, tab3, tab4, tab5 = st.tabs([
     "📋 LOS Statistics",
     "⏱️  Flow Metrics",
     "🏥 Occupancy & Queues",
     "📊 Volume Patterns",
     "🎯 Benchmarks",
-    "🔒 Optimization",
 ])
 
 
@@ -756,41 +755,3 @@ with tab5:
                 st.plotly_chart(fig, use_container_width=True)
 
 
-# ════════════════════════════════════════════════════════════════════════════════
-# TAB 6 — OPTIMIZATION
-# ════════════════════════════════════════════════════════════════════════════════
-with tab6:
-    st.markdown("### 🔒 Simulation-Based Optimization")
-    st.markdown("""
-    <div style='background:#fffbeb;border:1px solid #fde68a;border-radius:12px;
-                padding:36px;text-align:center'>
-        <div style='font-size:48px;margin-bottom:16px'>🔒</div>
-        <h3 style='color:#0f172a;margin:0 0 12px'>Premium Feature</h3>
-        <p style='color:#6b7280;max-width:540px;margin:0 auto 28px;
-                  line-height:1.65;font-size:14px'>
-            Unlock AI-powered prescriptive redesign built on discrete-event simulation —
-            calibrated to your actual patient data.
-        </p>
-    </div>
-    """, unsafe_allow_html=True)
-    st.markdown("")
-    f1,f2,f3 = st.columns(3)
-    for i,(icon,title,desc) in enumerate([
-        ("🏥","Acute/Urgent Partitioning","Optimize routing between acuity streams"),
-        ("🛏️","Track & Bed Redesign","Resize zones based on actual demand patterns"),
-        ("👥","Staff Schedule Optimization","Match hours to arrival curves"),
-        ("🔄","Flow Redesign","Reduce handoff delays and queue bottlenecks"),
-        ("📊","What-If Scenarios","Compare 10+ redesign options side by side"),
-        ("📉","LOS & LWBS Forecast","Quantify projected KPI gains"),
-    ]):
-        [f1,f2,f3][i%3].markdown(f"""
-        <div style='background:#f8fafc;border:1px solid #e5e7eb;border-radius:10px;
-                    padding:14px;margin-bottom:10px'>
-            <div style='font-size:20px;margin-bottom:6px'>{icon}</div>
-            <div style='font-weight:700;font-size:12px;color:#0f172a;margin-bottom:3px'>{title}</div>
-            <div style='font-size:11px;color:#9ca3af;line-height:1.4'>{desc}</div>
-        </div>""", unsafe_allow_html=True)
-    st.markdown("")
-    bc1,bc2,_ = st.columns([1,1,2])
-    bc1.button("Request Premium Access", type="primary")
-    bc2.button("View Sample Report")
