@@ -63,15 +63,11 @@ st.markdown("""
     <div style='font-size:20px'>🔒</div>
     <div>
         <div style='font-weight:700;font-size:13px;color:#166534;margin-bottom:4px'>
-            Your data is private and secure
+            Only operational de-identified data
         </div>
         <div style='font-size:12px;color:#374151;line-height:1.6'>
-            EDflow is designed for <strong>de-identified operational data only</strong> —
-            no patient names, MRNs, or dates of birth. This type of export is outside
-            HIPAA's individually identifiable information scope. &nbsp;·&nbsp;
-            <strong>Your file is processed in this browser session only.</strong>
-            It is never stored on our servers, transmitted, or retained after
-            you close this tab.
+            EDflow works with <strong>de-identified operational data</strong>
+            (no names, MRNs, or DOBs).
         </div>
     </div>
 </div>
