@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Python
 __pycache__/
 *.py[cod]
@@ -39,3 +40,7 @@ data/client/
 
 # Logs
 *.log
+=======
+__pycache__/
+*.pyc
+>>>>>>> 296e81a (add README, ROADMAP and gitignore)
